@@ -1,0 +1,13 @@
+.form-control{
+  &.ng-invalid{
+    border-color: red;
+    background-color: antiquewhite;
+  }
+}
+
+.error-message{
+  font-size: 0.8em;
+  font-style: italic;
+  color: red;
+}
+

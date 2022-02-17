@@ -1,5 +1,16 @@
 
 
+.form-control.ng-invalid {
+  border-color: red;
+  background-color: antiquewhite;
+}
+
+.error-message {
+  font-size: 0.8em;
+  font-style: italic;
+  color: red;
+}
+
 /* You can add global styles to this file, and also import other style files */
 
 /*!

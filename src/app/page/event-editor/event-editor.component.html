@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-6 offset-3">
+      <form #eventForm="ngForm" (ngSubmit)="onUpdate(eventForm)">
+          <div class="form-group">
+              <label for="event-name">Name</label>
+              <input [(ngModel)]="event.name"
+                     pattern="^[a-űA-Ű \-,0-9]{8,}$"
+                     required
+                     id="event-name"
+                     name="name"
+                     type="text"
+                     class="form-control" />
+              <div [hidden]="eventForm.controls['name']?.valid"
+                   class="div error-message">
+                  The name is mandatory and should be at least 8 characters long
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="event-date">Date</label>
+              <input [(ngModel)]="event.date"
+                     required
+                     id="event-date"
+                     name="date"
+                     type="text"
+                     class="form-control" />
+              <div [hidden]="eventForm.controls['date']?.valid"
+                   class="div error-message">
+                   The date is mandatory
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="event-time">Time</label>
+              <input [(ngModel)]="event.time"
+                     required
+                     id="event-time"
+                     name="time"
+                     type="text"
+                     class="form-control" />
+              <div [hidden]="eventForm.controls['time']?.valid"
+                   class="div error-message">
+                   The time is mandatory
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="event-location">Location</label>
+              <input [(ngModel)]="event.location"
+                     pattern="^[a-űA-Ű \-,0-9]{5,}$"
+                     required
+                     id="event-location"
+                     name="location"
+                     type="text"
+                     class="form-control" />
+              <div [hidden]="eventForm.controls['location']?.valid"
+                   class="div error-message">
+                   The location is mandatory
+              </div>
+          </div>
+
+          <button [disabled]="eventForm.invalid" class="btn btn-primary btn-block">
+              <i class="fa fa-save"></i>
+              Update
+          </button>
+      </form>
+  </div>
+</div>
+

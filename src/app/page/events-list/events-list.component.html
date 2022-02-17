@@ -18,6 +18,11 @@
         <td>{{event.time}}</td>
         <td>{{event.location}}</td>
         <td>
+          <div class="button-group">
+            <button (click)="onInfo(event)" class="btn btn-info">
+              <i class="fa fa-info"></i>
+            </button>
+          </div>
 
         </td>
       </tr>
